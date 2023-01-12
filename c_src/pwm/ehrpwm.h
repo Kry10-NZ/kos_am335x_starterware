@@ -42,6 +42,7 @@
 #ifndef _EHRPWM_H_
 #define _EHRPWM_H_
 
+#include <stdbool.h>
 #include "hw_ehrpwm.h"
 #ifdef __cplusplus
 extern "C" {
@@ -161,8 +162,6 @@ extern "C" {
 #define  EQEP   0x03
 
 
-
-typedef char bool;
 
 //**********************************************************************
 //  API FUNCTION PROTOTYPES

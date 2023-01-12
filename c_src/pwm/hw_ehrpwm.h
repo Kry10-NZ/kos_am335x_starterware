@@ -76,18 +76,11 @@ extern "C" {
 #define EHRPWM_ETFRC		(0x3A)
 #define EHRPWM_PCCTL		(0x3C)
 
-#if defined(am1808) || defined(omapl138) || defined(c6748)
-#define EHRPWM_HRCNFG		(0x1040)
-#endif
-
 /*
 ** The macro defined below corresponds to HRCTL register of EHRPWM module.
 ** This definition is used to keep compatibility with the driver(EHRPWM DAL). 
 */
-#if defined(am335x) || defined(am335x_15x15) || defined(c6a811x) || \
-    defined(am386x) || defined(c6741x)
 #define EHRPWM_HRCNFG           (0x40)
-#endif
 
 
 /**************************************************************************\
