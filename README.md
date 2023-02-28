@@ -2,15 +2,26 @@
 
 **TODO: Add description**
 
-## Installation
+## Manifest installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `kos_am335x_starterware` to your list of dependencies in `mix.exs`:
+Adding `kos_am335x_starterware` to your list of manifest dependencies in `mix.exs`:
 
 ```elixir
 def deps do
   [
-    {:kos_am335x_starterware, "~> 0.1.0"}
+    {:kos_am335x_starterware, git: "https://github.com/Kry10-NZ/kos_am335x_starterware.git", sparse: "manifest"}
+  ]
+end
+```
+
+## Module installation
+
+Adding `kos_am335x_starterware` to your list of application modules in an application `mix.exs`:
+
+```elixir
+def deps do
+  [
+    {:kos_am335x_starterware, git: "https://github.com/Kry10-NZ/kos_am335x_starterware.git"}
   ]
 end
 ```
