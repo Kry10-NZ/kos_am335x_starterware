@@ -9,7 +9,7 @@ Adding `kos_am335x_starterware` to your list of manifest dependencies in `mix.ex
 ```elixir
 def deps do
   [
-    {:kos_am335x_starterware, git: "https://github.com/Kry10-NZ/kos_am335x_starterware.git", sparse: "manifest"}
+    {:kos_am335x_starterware, git: "https://github.com/Kry10-NZ/kos_am335x_starterware.git"}
   ]
 end
 ```
@@ -21,7 +21,7 @@ Adding `kos_am335x_starterware` to your list of application modules in an applic
 ```elixir
 def deps do
   [
-    {:kos_am335x_starterware, git: "https://github.com/Kry10-NZ/kos_am335x_starterware.git"}
+    {:kos_am335x_starterware, git: "https://github.com/Kry10-NZ/kos_am335x_starterware.git", sparse: "interface"}
   ]
 end
 ```
