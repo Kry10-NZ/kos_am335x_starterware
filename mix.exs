@@ -8,7 +8,9 @@ defmodule KosAm335xStarterware.MixProject do
   def project do
     [
       app: :kos_am335x_starterware,
+      compilers: [:cmake] ++ Mix.compilers,
       version: "0.1.0",
+      deps: deps()
     ]
   end
 
@@ -16,6 +18,12 @@ defmodule KosAm335xStarterware.MixProject do
   def application do
     [
       extra_applications: [:logger, :kos_manifest],
+    ]
+  end
+
+  defp deps do
+    [
+      {:elixir_cmake, "~> 0.8.0"}
     ]
   end
 end
