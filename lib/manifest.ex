@@ -35,6 +35,11 @@ defmodule KosAm335xStarterware.Manifest do
     msg_server = Keyword.get(opts, :msg_server, Context.default_msg_server())
 
     gpio = gpio_definition(protocol)
+    {:ok, context} =
+      :kos_am335x_starterware
+      |> Application.app_dir()
+      |> Path.join("cmake/kos_am335x_gpio")
+      |> then(&Context.put_binary(context, "kos_am335x_gpio", &1))
 
     add_and_publish(context, gpio, protocol, @gpio_clock_setups, msg_server)
   end
@@ -44,6 +49,11 @@ defmodule KosAm335xStarterware.Manifest do
     protocol = Keyword.get(opts, :protocol, @pwm_protocol)
     msg_server = Keyword.get(opts, :msg_server, Context.default_msg_server())
     pwm_id = Keyword.get(opts, :am335x_pwm_id, 0)
+    {:ok, context} =
+      :kos_am335x_starterware
+      |> Application.app_dir()
+      |> Path.join("cmake/kos_am335x_pwm")
+      |> then(&Context.put_binary(context, "kos_am335x_pwm", &1))
 
     if pwm_id not in @pwm_ids do
       {:error, :invalid_pwm_id}
